@@ -12,6 +12,7 @@ import java.util.stream.IntStream;
  *   2. CompletableFuture可以通过空参构造获取，但并不推荐，推荐使用静态方法 runAsync()和supplyAsync()获取，在没有指定线程池的
  *     情况下使用默认的ForkJoinPool，
  *   3. CompletableFuture中的join()相比get()是都能获取返回值，但join()没有检查性异常
+ *   4. CompletableFuture中的whenComplete()和exceptionally()的使用
  */
 public class CompletableFutureTempl {
     public static void main(String[] args) {

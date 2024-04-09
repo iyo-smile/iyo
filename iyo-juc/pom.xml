@@ -8,9 +8,7 @@
         <artifactId>iyo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>iyo-juc</artifactId>
-
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
