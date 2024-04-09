@@ -28,9 +28,11 @@ public class ThreadTempl {
         }
         // 4.线程池 创建固定数量线程
         ExecutorService threadPool = Executors.newFixedThreadPool(5);
+        // execute() 参数为Runnable接口的实现类 返回类型为void
         threadPool.execute(()->{
             System.out.println("executors runnable");
         });
+        // submit() 参数为Callable接口的实现类 返回类型为Future
         Future<String> future = threadPool.submit(() -> "executors callable");
         try {
             System.out.println(future.get());
