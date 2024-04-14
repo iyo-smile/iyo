@@ -7,13 +7,15 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @Author:iyo
  * @Date:2024/4/14 5:45
  * @Description: 中断线程示例
- *   1.
+ *   1.volatile关键字
  *   2.AtomicBoolean
  *   3.Thread类api
  *
  * notion:
  *   1.在使用 Lambda 表达式时，如果捕获了外部作用域中的变量，则这些变量必须是 最终的（final） 或 实际上的最终的（effectively final）.
- *   2.Lambda 表达式可以改变静态变量，这是由于静态变量自身的特性——类级别的共享状态和不受作用域限制。然而，对静态变量的修改必须考虑到多线程环境下的线程安全性问题
+ *   2.Lambda 表达式可以改变静态变量，这是由于静态变量自身的特性——类级别的共享状态和不受作用域限制。
+ *      不过对静态变量的修改必须考虑到多线程环境下的线程安全性问题
+ *   3.Thread的实例方法interrupt()，不会立即停止线程，只是修改了中断标识位，也就是说即使中断标识位为ture，线程仍可能在执行。
  */
 public class InterruptTempl {
 
